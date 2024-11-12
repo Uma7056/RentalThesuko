@@ -1,0 +1,22 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+  }
+  
+  #admin-sidebar, #user-sidebar {
+    width: 300px;
+  }
+  
+  #admin-sidebar h4, #user-sidebar h4 {
+    font-weight: bold;
+  }
+  
+  #admin-sidebar .nav-link:hover, #user-sidebar .nav-link:hover {
+    background-color: #495057;
+    color: #fff;
+  }
+  
+  main {
+    min-height: 100vh;
+  }
+  

@@ -1,0 +1,38 @@
+.custom-card {
+    border-radius: 15px;
+    background-color: #f8f9fa; /* Classic light background */
+    width: 90%; /* Increased width */
+    max-width: 800px; /* Limit max width */
+    overflow: hidden;
+}
+
+.card-header img {
+    width: 100%;
+    height: auto;
+    transition: transform 0.5s ease; /* Smooth image animation */
+}
+
+.card-header img:hover {
+    transform: scale(1.05); /* Slight zoom on hover */
+}
+
+.card-body {
+    padding: 30px;
+    text-align: center;
+    font-size: 1.1em;
+}
+
+.card-title {
+    font-size: 2em;
+    font-weight: bold;
+    color: #343a40;
+    margin-bottom: 20px;
+}
+
+.text-muted {
+    color: #6c757d;
+}
+
+.shadow-lg {
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
