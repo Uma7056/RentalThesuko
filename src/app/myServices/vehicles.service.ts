@@ -272,6 +272,10 @@ export class VehiclesService {
   deletevehicle(id:any)
   {
     let index=this.vehicles.findIndex(vehicle=>vehicle.vehicleId==id);
+    if(index != -1)
+    {
+      this.vehicles.splice(index,1)
+    }
   }
 
   getBikes()
@@ -286,8 +290,11 @@ export class VehiclesService {
 
   updatevehicle(id:any,newvehicle:any)
   {
-    let index=this.vehicles.findIndex(vehicle=>vehicle.vehicleId==id)
-    this.vehicles.splice(index,1,newvehicle);
+    let index=this.vehicles.findIndex(vehicle=>vehicle.vehicleId==id);
+    if(index != -1)
+    {
+      this.vehicles.splice(index,1,newvehicle);
+    }
   }
   
 }

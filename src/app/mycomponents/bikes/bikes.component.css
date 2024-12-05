@@ -1,59 +1,117 @@
 body {
-    background-color: #f8f9fa; /* Light background for a classic look */
+  background-color: #f8f9fa; /* Light background for a classic look */
+}
+
+.card {
+  border-radius: 8px;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.card-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #343a40;
+}
+
+.text-muted {
+  color: #6c757d !important;
+}
+
+.text-secondary {
+  color: #868e96 !important;
+}
+
+.badge.bg-primary {
+  background-color: #007bff;
+  padding: 0.5rem 1rem;
+  font-size: 1.1rem;
+}
+
+.card-body {
+  padding: 1.5rem;
+  background-color: #fdf5e6; /* Light beige color for a warm classic look */
+}
+
+.card-img-top {
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+  object-fit: cover;
+}
+
+.container {
+  padding-top: 2rem;
+}
+
+h4, h5, p {
+  margin-bottom: 0.5rem;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  transition: color 0.3s;
+}
+
+a:hover {
+  color: #007bff; /* Highlight links on hover */
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) { /* For laptop screens */
+  .container {
+    padding: 1.5rem;
   }
-  
-  .card {
-    border-radius: 8px;
-    overflow: hidden;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-  }
-  
-  .card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-  }
-  
+
   .card-title {
-    font-size: 1.5rem;
-    font-weight: 600;
-    color: #343a40;
+    font-size: 1.3rem; /* Adjust card title size */
   }
-  
-  .text-muted {
-    color: #6c757d !important;
-  }
-  
-  .text-secondary {
-    color: #868e96 !important;
-  }
-  
+
   .badge.bg-primary {
-    background-color: #007bff;
-    padding: 0.5rem 1rem;
+    font-size: 1rem; /* Adjust badge size */
+  }
+}
+
+@media (max-width: 768px) { /* For tablets */
+  .row {
+    justify-content: center; /* Center cards on smaller screens */
+  }
+
+  .col-md-6 {
+    max-width: 90%; /* Reduce card width */
+  }
+
+  .card-title {
+    font-size: 1.2rem; /* Further reduce title size */
+  }
+}
+
+@media (max-width: 576px) { /* For mobile screens */
+  .row {
+    flex-direction: column; /* Stack cards vertically */
+    align-items: center;
+  }
+
+  .col-md-6 {
+    width: 100%; /* Make cards take full width */
+    padding: 10px; /* Add spacing around cards */
+  }
+
+  .card-title {
     font-size: 1.1rem;
   }
-  
+
+  .badge.bg-primary {
+    font-size: 0.9rem;
+    padding: 0.4rem 0.8rem; /* Compact badge size */
+  }
+
   .card-body {
-    padding: 1.5rem;
+    padding: 1rem; /* Compact padding */
   }
-  
-  .card-img-top {
-    border-top-left-radius: 8px;
-    border-top-right-radius: 8px;
-  }
-  
-  .container {
-    padding-top: 2rem;
-  }
-  
-  h4, h5, p {
-    margin-bottom: 0.5rem;
-  }
-  .card-body {
-    padding: 1.5rem;
-    background-color: #fdf5e6; /* Light beige color for a warm classic look */
-  }
-a{
-  text-decoration: none;
 }
-  

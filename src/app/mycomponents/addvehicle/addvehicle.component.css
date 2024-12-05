@@ -1,0 +1,92 @@
+.container {
+  max-width: 1500px;
+  margin: auto;
+}
+
+.card {
+  border-radius: 10px;
+}
+
+.card-header {
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.form-control {
+  border-radius: 5px;
+  padding: 10px;
+}
+
+.btn {
+  padding: 10px 20px;
+  font-size: 16px;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) { /* For laptop screens */
+  .container {
+    padding: 20px; /* Add padding for smaller screens */
+  }
+
+  .card {
+    margin: 0 auto; /* Center the card */
+  }
+
+  .form-control {
+    font-size: 14px; /* Adjust font size for better fit */
+  }
+
+  .btn {
+    font-size: 14px; /* Adjust button size */
+  }
+}
+
+@media (max-width: 768px) { /* For tablets and smaller screens */
+  .container {
+    padding: 15px;
+  }
+
+  .card {
+    width: 100%; /* Card takes full width */
+    border-radius: 8px; /* Slightly smaller corners for compact look */
+  }
+
+  .form-control {
+    font-size: 13px; /* Adjust font size further */
+    padding: 8px; /* Reduce padding */
+  }
+
+  .btn {
+    font-size: 13px;
+    padding: 8px 16px;
+  }
+}
+
+@media (max-width: 576px) { /* For mobile screens */
+  .container {
+    padding: 10px;
+  }
+
+  .card {
+    margin: 10px auto; /* Add spacing around the card */
+  }
+
+  .form-control {
+    font-size: 12px; /* Smaller font size for mobile */
+    padding: 6px; /* Compact padding */
+  }
+
+  .btn {
+    font-size: 12px;
+    padding: 6px 12px; /* Compact button size */
+  }
+
+  .btn-danger, .btn-success {
+    width: 48%; /* Buttons take up equal space side-by-side */
+  }
+
+  .d-flex {
+    flex-wrap: wrap;
+    gap: 5px; /* Add spacing between buttons on mobile */
+  }
+}

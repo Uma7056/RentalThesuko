@@ -27,7 +27,7 @@ const routes: Routes = [
   {path:'admin',component:AdminDashboardComponent,
     children:[
       {path:'car',component:CarsComponent},
-      {path:'bikes',component:BikesComponent},
+      {path:'bike',component:BikesComponent},
       {path:'add',component:AddvehicleComponent},
       {path:'manage',component:ManagevehicleComponent},
       {path:'orders',component:ViewOrdersComponent}

@@ -16,7 +16,7 @@ export class ViewComponent {
     orderedvehicle:any;
     uname:any;
     uaddress:any;
-    utime:any;
+    uimage:any;
     neworder:any;
 
     constructor(private route:ActivatedRoute,private service: VehiclesService, private wish:WishlistService,private router: Router,private order:OrdersService){}
@@ -43,16 +43,16 @@ export class ViewComponent {
         this.orderedvehicle=vehicle;
     }
     
-    orderNow()
+    orderNow(vehicle:any)
     {
       this.neworder=
       {
-        vehicleId: this.orderedvehicle.vehicleId,
-        vehicleName: this.orderedvehicle.vehicleName,
-        rentaPrice: this.orderedvehicle.rentaPrice,
+        vehicleId: this.vehicle.vehicleId,
+        vehicleName: this.vehicle.vehicleName,
+        rentaPrice: this.vehicle.rentaPrice,
         usename:this.uname,
         address:this.uaddress,
-        utime:this.utime
+        uimage:this.vehicle.vehicleImage
       }
       
       //console.log(this.neworder);

@@ -1,22 +1,84 @@
-body {
-    margin: 0;
-    font-family: Arial, sans-serif;
+body, html {
+  height: 100%;
+  margin: 0;
+}
+
+/* Fixed Sidebar */
+.fixed-sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  overflow-y: auto; /* Sidebar scrolls independently if needed */
+  width: 25%; /* Adjust width as necessary for your layout */
+  z-index: 1000; /* Keeps sidebar above main content */
+  background-color: #343a40;
+}
+
+/* Main Content Area */
+.main-content {
+  margin-left: 25%; /* Same width as sidebar */
+  padding: 20px;
+  overflow-y: auto;
+  height: 100vh;
+}
+
+/* Style adjustments for sidebar links */
+#admin-sidebar .nav-link {
+  color: #fff;
+  font-size: 1.1rem;
+  padding: 0.75rem;
+  transition: color 0.3s;
+}
+
+#admin-sidebar .nav-link:hover {
+  color: #ccc;
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) { /* For laptop screens */
+  .fixed-sidebar {
+    width: 20%; /* Slightly smaller sidebar */
   }
-  
-  #admin-sidebar, #user-sidebar {
-    width: 300px;
+
+  .main-content {
+    margin-left: 20%;
   }
-  
-  #admin-sidebar h4, #user-sidebar h4 {
-    font-weight: bold;
+
+  #admin-sidebar .nav-link {
+    font-size: 1rem; /* Adjust font size */
   }
-  
-  #admin-sidebar .nav-link:hover, #user-sidebar .nav-link:hover {
-    background-color: #495057;
-    color: #fff;
+}
+
+@media (max-width: 768px) { /* For tablets and smaller screens */
+  .fixed-sidebar {
+    width: 100%; /* Sidebar spans full width */
+    height: auto; /* Adjust height */
+    position: static; /* Sidebar no longer fixed */
   }
-  
-  main {
-    min-height: 100vh;
+
+  .main-content {
+    margin-left: 0;
+    padding: 10px; /* Adjust padding for smaller screens */
   }
-  
+
+  #admin-sidebar .nav-link {
+    font-size: 1rem;
+    padding: 0.5rem; /* Reduce padding */
+  }
+}
+
+@media (max-width: 576px) { /* For mobile screens */
+  #admin-sidebar .nav-link {
+    font-size: 0.9rem; /* Further adjust font size */
+  }
+
+  .fixed-sidebar {
+    padding: 10px; /* Add padding for better touch experience */
+  }
+
+  .main-content {
+    padding: 5px; /* Minimize padding on smaller screens */
+  }
+}

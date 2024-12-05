@@ -13,6 +13,6 @@ export class BookingsComponent {
     ngOnInit()
     {
       this.orders.getOrders().subscribe((res)=>{this.order=res})
-      console.table(this.orders)
+      console.table(this.order)
     }
 }

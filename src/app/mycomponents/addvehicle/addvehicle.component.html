@@ -1,1 +1,62 @@
-<p>addvehicle works!</p>
+<div class="container my-5">
+  <div class="row justify-content-center">
+    <div class="col-md-8 col-lg-6">
+      <!-- Card Container -->
+      <div class="card shadow-sm">
+        <!-- Card Header -->
+        <div class="card-header text-white text-center" style="background-color: rgb(57, 50, 50)">
+          <h4 class="mb-0">Add Vehicle</h4>
+        </div>
+        <!-- Card Body -->
+        <div class="card-body">
+          <form action="" [formGroup]="addproduct" (ngSubmit)="addnow()">
+            <div class="form-group mb-3">
+              <label for="vehicleId" class="form-label fw-bold">Vehicle ID:</label>
+              <input type="text" id="vehicleId" class="form-control" formControlName="vehicleId" placeholder="Enter Vehicle ID">
+            </div>
+            <div class="form-group mb-3">
+              <label for="vehicleName" class="form-label fw-bold">Vehicle Name:</label>
+              <input type="text" id="vehicleName" class="form-control" formControlName="vehicleName" placeholder="Enter Vehicle Name">
+            </div>
+            <div class="form-group mb-3">
+              <label for="vehicleCompany" class="form-label fw-bold">Vehicle Company:</label>
+              <input type="text" id="vehicleCompany" class="form-control" formControlName="vehicleCompany" placeholder="Enter Vehicle Company">
+            </div>
+            <div class="form-group mb-3">
+              <label for="rentaPrice" class="form-label fw-bold">Rental Price:</label>
+              <input type="text" id="rentaPrice" class="form-control" formControlName="rentaPrice" placeholder="Enter Rental Price">
+            </div>
+            <div class="form-group mb-3">
+              <label for="availableTime" class="form-label fw-bold">Available Time:</label>
+              <input type="text" id="availableTime" class="form-control" formControlName="availableTime" placeholder="Enter Available Time">
+            </div>
+            <div class="form-group mb-3">
+              <label for="fuelType" class="form-label fw-bold">Fuel Type:</label>
+              <input type="text" id="fuelType" class="form-control" formControlName="fuelType" placeholder="Enter Fuel Type">
+            </div>
+            <div class="form-group mb-3">
+              <label for="seatingCapacity" class="form-label fw-bold">Seating Capacity:</label>
+              <input type="text" id="seatingCapacity" class="form-control" formControlName="seatingCapacity" placeholder="Enter Seating Capacity">
+            </div>
+            <div class="form-group mb-3">
+              <label for="vehicleType" class="form-label fw-bold">Vehicle Type:</label>
+              <input type="text" id="vehicleType" class="form-control" formControlName="vehicleType" placeholder="Enter Vehicle Type">
+            </div>
+            <div class="form-group mb-3">
+              <label for="vehicleImage" class="form-label fw-bold">Vehicle Image:</label>
+              <input type="text" id="vehicleImage" class="form-control" formControlName="vehicleImage" placeholder="Enter Vehicle Image URL">
+            </div>
+            <div class="form-group mb-3">
+              <label for="rating" class="form-label fw-bold">Rating:</label>
+              <input type="text" id="rating" class="form-control" formControlName="rating" placeholder="Enter Rating">
+            </div>
+            <div class="d-flex justify-content-between">
+              <button class="btn btn-success" type="submit">Add</button>
+              <button class="btn btn-danger" type="reset">Cancel</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

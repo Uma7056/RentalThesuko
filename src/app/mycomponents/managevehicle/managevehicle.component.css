@@ -1,0 +1,104 @@
+/* Cards and overall layout */
+.card {
+  transition: transform 0.2s, box-shadow 0.2s;
+  background-color: hsl(219, 18%, 81%); /* Light grey background for cards */
+}
+
+.card:hover {
+  transform: scale(1.03);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.card-title {
+  font-size: 1.25rem;
+  color: #343a40;
+}
+
+.card-text {
+  font-size: 0.95rem;
+  color: #677e92;
+}
+
+.badge {
+  font-size: 0.85rem;
+}
+
+.btn {
+  width: 48%;
+}
+
+/* Modal styles */
+.modal-content {
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.modal-header {
+  border-bottom: 2px solid #dee2e6;
+}
+
+.modal-title {
+  font-family: Arial, sans-serif;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.btn-close-white {
+  filter: brightness(0) invert(1);
+}
+
+.form-label {
+  color: #343a40;
+  font-size: 1rem;
+}
+
+.form-control {
+  border-radius: 5px;
+  font-size: 1rem;
+}
+
+.btn-primary {
+  background-color: #007bff;
+  border: none;
+}
+
+.btn-primary:hover {
+  background-color: #0056b3;
+}
+
+.btn-danger {
+  background-color: #dc3545;
+  border: none;
+}
+
+.btn-danger:hover {
+  background-color: #a71d2a;
+}
+
+.modal-body {
+  padding: 1.5rem;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .card {
+      margin-bottom: 1rem;
+      background-color: #fff9f1; /* Light beige for smaller screens */
+  }
+
+  .btn {
+      width: 100%; /* Full width buttons for smaller screens */
+      margin-bottom: 0.5rem;
+  }
+
+  .modal-content {
+      width: 90%;
+      margin: auto;
+  }
+}
+
+@media (min-width: 769px) {
+  .card {
+      background-color: #eef2ff; /* Light blue for larger screens */
+  }
+}

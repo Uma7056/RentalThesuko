@@ -1,0 +1,93 @@
+.table {
+  border-radius: 10px;
+  overflow: hidden;
+  background-color: #f8f9fa;
+}
+
+.thead-dark th {
+  background-color: #343a40;
+  color: #fff;
+  text-align: center;
+}
+
+.table-hover tbody tr:hover {
+  background-color: #e9ecef;
+}
+
+.booking-img {
+  max-width: 100px;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+  border-radius: 5px;
+  border: 1px solid #dee2e6; /* Subtle border for image */
+}
+
+tbody td, 
+tbody th {
+  vertical-align: middle;
+  text-align: center;
+  font-size: 1rem;
+}
+
+h1 {
+  font-family: Arial, sans-serif;
+  color: #343a40;
+}
+
+.shadow {
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsive Design */
+@media (max-width: 992px) { /* For tablets and small laptops */
+  .table {
+    font-size: 0.9rem;
+  }
+
+  .booking-img {
+    max-width: 80px; /* Adjust image size */
+  }
+
+  h1 {
+    font-size: 1.8rem;
+  }
+}
+
+@media (max-width: 768px) { /* For tablets */
+  .table {
+    font-size: 0.85rem;
+  }
+
+  h1 {
+    font-size: 1.6rem;
+    text-align: center;
+  }
+
+  .booking-img {
+    max-width: 70px;
+  }
+}
+
+@media (max-width: 576px) { /* For mobile screens */
+  .table {
+    font-size: 0.8rem;
+  }
+
+  h1 {
+    font-size: 1.4rem;
+    text-align: center;
+  }
+
+  .booking-img {
+    max-width: 60px;
+  }
+
+  tbody td {
+    font-size: 0.9rem; /* Smaller text for mobile */
+  }
+
+  .table-responsive {
+    overflow-x: auto; /* Enable horizontal scrolling */
+  }
+}

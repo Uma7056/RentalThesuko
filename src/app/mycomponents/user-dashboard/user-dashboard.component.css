@@ -1,37 +1,73 @@
 body, html {
-    height: 100%;
-    margin: 0;
-  }
-  
-  /* Fixed Sidebar */
+  height: 100%;
+  margin: 0;
+}
+
+/* Fixed Sidebar */
+.fixed-sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  overflow-y: auto; /* Sidebar scrolls independently if needed */
+  width: 25%; /* Default width for larger screens */
+  z-index: 1000; /* Keeps sidebar above main content */
+  transition: width 0.3s ease; /* Smooth transition for responsiveness */
+}
+
+.main-content {
+  margin-left: 25%; /* Same width as sidebar */
+  padding: 20px;
+  overflow-y: auto;
+  height: 100vh;
+  transition: margin-left 0.3s ease; /* Smooth transition for responsiveness */
+}
+
+/* Style adjustments for sidebar links */
+#admin-sidebar .nav-link {
+  color: #fff;
+  font-size: 1.1rem;
+  padding: 0.75rem;
+  transition: color 0.3s;
+}
+
+#admin-sidebar .nav-link:hover {
+  color: #ccc;
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Responsive Design */
+@media (max-width: 992px) { /* Tablets and smaller laptops */
   .fixed-sidebar {
-    position: fixed;
-    top: 0;
-    left: 0;
-    height: 100vh;
-    overflow-y: auto; /* Sidebar scrolls independently if needed */
-    width: 25%; /* Adjust width as necessary for your layout */
-    z-index: 1000; /* Keeps sidebar above main content */
+    width: 20%; /* Reduce sidebar width */
   }
-  
-  /* Main Content Area */
+
   .main-content {
-    margin-left: 25%; /* Same width as sidebar */
-    padding: 20px;
-    overflow-y: auto;
-    height: 100vh;
+    margin-left: 20%;
   }
-  
-  /* Style adjustments for sidebar links */
+
   #admin-sidebar .nav-link {
-    color: #fff;
-    font-size: 1.1rem;
-    padding: 0.75rem;
-    transition: color 0.3s;
+    font-size: 1rem; /* Adjust font size */
   }
-  
-  #admin-sidebar .nav-link:hover {
-    color: #ccc;
-    background-color: rgba(255, 255, 255, 0.1);
+}
+
+@media (max-width: 768px) { /* Mobile screens */
+  .fixed-sidebar {
+    width: 100%; /* Sidebar takes full width on small screens */
+    height: auto; /* Adjust height to fit content */
+    position: static; /* Sidebar moves to the top */
   }
-  
+
+  .main-content {
+    margin-left: 0;
+    padding-top: 20px; /* Add spacing for sidebar */
+  }
+
+  #admin-sidebar .nav-link {
+    font-size: 0.9rem; /* Adjust font size further for smaller screens */
+  }
+
+  .fixed-sidebar .brand {
+    text-align: center; /* Center align the brand name */
+  }
+}

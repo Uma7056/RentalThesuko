@@ -1,24 +1,21 @@
 <div class="row">
-    <!-- Sidebar -->
-    <div class="col-md-3">
-      <nav id="admin-sidebar" class="bg-dark text-light p-4 fixed-sidebar">
-        <a routerLink="#" class="navbar-brand brand" style="font-size:43px; font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif"><b>Rental Thesukoo</b></a>
-        <div class="container mt-4">
-          <ul class="navbar-nav">
-            <li class="nav-item py-3"><a routerLink="/user/car" style="font-weight: bold; font-size: 28px;" class="nav-link" >Cars <i class="fa-solid fa-car p-2 animate__animated animate__flash animate__repeat-2"></i></a></li>
-            <li class="nav-item py-3"><a routerLink="/user/bike" style="font-weight: bold; font-size: 28px;" class="nav-link">Bikes<i class="fa-solid fa-bicycle p-2 animate__animated animate__flash animate__repeat-2"></i></a></li>
-
-            <li class="nav-item py-3"><a routerLink="/user/wishlist" style="font-weight: bold; font-size: 28px;" class="nav-link">Wishlist <i class="fa-solid fa-hand-holding-heart p-2 animate__animated animate__flash animate__repeat-2"></i></a></li>
-            <li class="nav-item py-3"><a routerLink="/user/booking" style="font-weight: bold; font-size: 28px;" class="nav-link">Bookings <i class="fa-solid fa-cart-shopping p-2 animate__animated animate__flash animate__repeat-2"></i></a></li>
-            <li class="nav-item py-3"><a routerLink="/user/order" style="font-weight: bold; font-size: 28px;" class="nav-link">View Orders <i class="fa-solid fa-book p-2 animate__animated animate__flash animate__repeat-2"></i></a></li>
-          </ul>
-        </div>
-      </nav>
-    </div>
-  
-    <!-- Main content area -->
-    <div class="col-md-9 main-content">
-      <router-outlet></router-outlet>
-    </div>
+  <!-- Sidebar -->
+  <div class="col-md-3 col-sm-12" id="sidebar-container">
+    <nav id="admin-sidebar" class="bg-dark text-light p-4 fixed-sidebar">
+      <a routerLink="#" class="navbar-brand brand" style="font-size:43px; font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif"><b>Rental Thesukoo</b></a>
+      <div class="container mt-4">
+        <ul class="navbar-nav">
+          <li class="nav-item py-3"><a routerLink="/user/car" style="font-weight: bold; font-size: 28px;" class="nav-link">Cars <i class="fa-solid fa-car p-2 animate__animated animate__flash animate__repeat-2"></i></a></li>
+          <li class="nav-item py-3"><a routerLink="/user/bike" style="font-weight: bold; font-size: 28px;" class="nav-link">Bikes <i class="fa-solid fa-bicycle p-2 animate__animated animate__flash animate__repeat-2"></i></a></li>
+          <li class="nav-item py-3"><a routerLink="/user/wishlist" style="font-weight: bold; font-size: 28px;" class="nav-link">Wishlist <i class="fa-solid fa-hand-holding-heart p-2 animate__animated animate__flash animate__repeat-2"></i></a></li>
+          <li class="nav-item py-3"><a routerLink="/user/booking" style="font-weight: bold; font-size: 28px;" class="nav-link">Bookings <i class="fa-solid fa-cart-shopping p-2 animate__animated animate__flash animate__repeat-2"></i></a></li>
+        </ul>
+      </div>
+    </nav>
   </div>
-  
+
+  <!-- Main content area -->
+  <div class="col-md-9 col-sm-12 main-content">
+    <router-outlet></router-outlet>
+  </div>
+</div>

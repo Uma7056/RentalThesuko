@@ -15,45 +15,50 @@
                     <p class="text-muted"><b>Vehicle Type:</b> {{vehicle.vehicleType}}</p>
                     <p class="text-muted"><b>Rating:</b> {{vehicle.rating}}</p>
                     <button class="btn btn-success p-2 m-3" (click)="addtowishlist(vehicle)"><b>Add to Wishlist</b></button>
-                    <button class="btn btn-danger p-2" data-bs-toggle="modal" data-bs-target="#mymodal" (click)="openvehicle(vehicle)">
+                    <button class="btn btn-danger p-2" data-bs-toggle="modal" data-bs-target="#mymodal" >
                         <b>Order Now</b>
                     </button>
+                </div>
+                <div class="modal fade" id="mymodal">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h2 class="modal-title" id="modalLabel">Orders Here</h2>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                <form (ngSubmit)="orderNow(vehicle)">
+                                    <div class="form-group mb-3">
+                                        <label class="form-label fw-bold" for="orderVehicleName">Vehicle Name</label>
+                                        <input type="text" class="form-control" id="orderVehicleName" [(ngModel)]="vehicle.vehicleName" name="vehicleName" disabled>
+                                    </div>
+                                    <div class="form-group mb-3">
+                                        <label class="form-label fw-bold" for="orderVehiclePrice">Vehicle Price</label>
+                                        <input type="text" class="form-control" id="orderVehiclePrice" [(ngModel)]="vehicle.rentaPrice" name="vehiclePrice" disabled>
+                                    </div>
+                                    <div class="form-group mb-3">
+                                        <label class="form-label fw-bold" for="userName">User Name</label>
+                                        <input type="text" class="form-control" id="userName" [(ngModel)]="uname" name="userName" required>
+                                    </div>
+                                    <div class="form-group mb-3">
+                                        <label class="form-label fw-bold" for="userAddress">Address</label>
+                                        <input type="text" class="form-control" id="userAddress" [(ngModel)]="uaddress" name="userAddress" required>
+                                    </div>
+                                    <div class="form-group mb-3">
+                                        <label class="form-label fw-bold" for="userAddress">Image</label>
+                                        <input type="text" class="form-control" id="image" [(ngModel)]="vehicle.vehicleImage" name="uimage" disabled required/>
+                                    </div>
+                                    <div class="form-group">
+                                        <button type="submit" class="btn btn-success" data-bs-dismiss="modal">Click to Order</button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
 </div>
 
-<div class="modal fade" id="mymodal" *ngIf="orderedvehicle">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h2 class="modal-title" id="modalLabel">Orders Here</h2>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div class="modal-body">
-                <form (ngSubmit)="orderNow()">
-                    <div class="form-group mb-3">
-                        <label class="form-label" for="orderVehicleName">Vehicle Name</label>
-                        <input type="text" class="form-control" id="orderVehicleName" [(ngModel)]="orderedvehicle.vehicleName" name="vehicleName" disabled>
-                    </div>
-                    <div class="form-group mb-3">
-                        <label class="form-label" for="orderVehiclePrice">Vehicle Price</label>
-                        <input type="text" class="form-control" id="orderVehiclePrice" [(ngModel)]="orderedvehicle.rentaPrice" name="vehiclePrice" disabled>
-                    </div>
-                    <div class="form-group mb-3">
-                        <label class="form-label" for="userName">User Name</label>
-                        <input type="text" class="form-control" id="userName" [(ngModel)]="uname" name="userName" required>
-                    </div>
-                    <div class="form-group mb-3">
-                        <label class="form-label" for="userAddress">Address</label>
-                        <input type="text" class="form-control" id="userAddress" [(ngModel)]="uaddress" name="userAddress" required>
-                    </div>
-                    <div class="form-group">
-                        <button type="submit" class="btn btn-success" data-bs-dismiss="modal">Click to Order</button>
-                    </div>
-                </form>
-            </div>
-        </div>
-    </div>
-</div>
+

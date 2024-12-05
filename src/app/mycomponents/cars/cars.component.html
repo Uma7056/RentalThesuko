@@ -1,22 +1,29 @@
 <br>
-<h1 style="text-align: center; font-weight: bold;" class="animate__animated animate__bounce animate__repeat-2">Enjoy Every Journey – Let’s Go {{username}}</h1>
+<h1 style="text-align: center; font-weight: bold;" 
+    class="animate__animated animate__bounce animate__repeat-2">
+    Enjoy Every Journey – Let’s Go {{username}}
+</h1>
 <div class="container mt-5">
-    <div class="row">
-      <div class="col-md-6" *ngFor="let b of cars" style="padding-bottom: 20px;">
-        <a routerLink="#" (click)="openvehicel(b.vehicleId)">
-        <div class="card shadow-lg border-0">
-          <div class="card-header p-0">
-            <img [src]="b.vehicleImage" alt="Vehicle Image" class="card-img-top rounded-top" style="height: 250px; object-fit: cover;">
-          </div>
-          <div class="card-body text-center">
-            <h2 class="card-title text-dark">{{b.vehicleName}}</h2>
-            <h5 class="text-muted">{{b.vehicleCompany}}</h5>
-            <p class="text-secondary mb-1">Fuel Type: {{b.fuelType}}</p>
-            <p class="text-secondary mb-3">Available: {{b.availableTime}}</p>
-            <h4><span class="badge bg-primary text-white">{{b.rating}}</span></h4>
-          </div>
+    <div class="row gy-4"> <!-- gy-4 adds spacing between rows -->
+        <div class="col-lg-6 col-md-6 col-sm-12" *ngFor="let b of cars">
+            <a routerLink="#" (click)="openvehicel(b.vehicleId)">
+                <div class="card shadow-lg border-0">
+                    <div class="card-header p-0">
+                        <img [src]="b.vehicleImage" alt="{{b.vehicleName}} Image" 
+                             class="card-img-top rounded-top" 
+                             style="height: 250px; object-fit: cover;">
+                    </div>
+                    <div class="card-body text-center">
+                        <h2 class="card-title text-dark">{{b.vehicleName}}</h2>
+                        <h5 class="text-muted">{{b.vehicleCompany}}</h5>
+                        <p class="text-secondary mb-1">Fuel Type: {{b.fuelType}}</p>
+                        <p class="text-secondary mb-3">Available: {{b.availableTime}}</p>
+                        <h4>
+                            <span class="badge bg-primary text-white">{{b.rating}}</span>
+                        </h4>
+                    </div>
+                </div>
+            </a>
         </div>
-      </a>
-      </div>
     </div>
-  </div>
+</div>

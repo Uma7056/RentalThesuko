@@ -1,34 +1,33 @@
 .table {
-    margin-top: 20px;
-    font-size: 16px;
-  }
-  
-  /* Styling for the image to maintain a fixed size */
-  .vehicle-img {
-    width: 100px;  /* Set the width to a fixed size */
-    height: 100px;  /* Maintain aspect ratio with a fixed height */
-    object-fit: cover;  /* Make sure the image is properly cropped */
-    border-radius: 5px; /* Optional: rounded corners */
-  }
-  
-  /* Styling for the rating badge */
-  .badge {
-    font-size: 1.2rem;
-    padding: 0.5rem 1rem;
-  }
-  
-  /* Add some spacing between the table rows */
-  tr {
-    transition: background-color 0.3s ease;
-  }
-  
-  tr:hover {
-    background-color: #f8f9fa; /* Light hover effect */
-  }
-  
-  /* Optional: Make sure the text aligns properly and doesn't overflow */
-  td, th {
-    text-align: center;
-    vertical-align: middle;
-  }
-  
+  border-radius: 10px;
+  overflow: hidden;
+  background-color: #f8f9fa;
+}
+
+.thead-dark th {
+  background-color: #343a40;
+  color: #fff;
+  text-align: center;
+}
+
+.table-hover tbody tr:hover {
+  background-color: #e9ecef;
+}
+
+.vehicle-img {
+  max-width: 100px;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+
+tbody td {
+  vertical-align: middle;
+  text-align: center;
+}
+
+.badge-warning {
+  font-size: 1rem;
+  padding: 0.5em 0.8em;
+  border-radius: 5px;
+}
